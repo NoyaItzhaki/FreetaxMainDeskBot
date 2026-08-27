@@ -9,7 +9,7 @@ def show(label):
     print(f"\n=== {label} ===")
 
 BODY = {
-    "search_needle": "noya"
+    "search_needle": "TEST"
 }
 METHOD = "POST"
 ENDPOINT = os.environ.get("LEAD_GET_ALL" , "").rstrip("/")

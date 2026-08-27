@@ -1,0 +1,19 @@
+{
+    "account_id": 9086,
+    "doctype_id": 3,
+    "total": 3000,
+    "products": [
+        {
+            "product_name": "טיפול בהפחתת ארנונה",
+            "quantity": 1,
+            "price": 3000
+        }
+    ],
+    "payments": [
+        {
+            "type": "PT_TRANS",
+            "amount": 3000,
+            "transfer_date": "16-08-2026"
+        }
+    ]
+}

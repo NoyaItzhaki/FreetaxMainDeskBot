@@ -10,7 +10,7 @@ def show(label):
 
 BODY = {
     "view_id": 0,
-    "search_needle": "noya"
+    "search_needle": "רומנו"
 }
 METHOD = "POST"
 ENDPOINT = os.environ.get("ACCOUNT_GET_ALL" , "").rstrip("/")
