@@ -3,13 +3,33 @@
 import os, json, urllib.request, urllib.error, dotenv
 from dotenv import dotenv_values, load_dotenv
 load_dotenv()
-BASE = os.environ.get("GAZIT_DEMO_BASE", "").rstrip("/")
+#DEMO 
+
+# BASE = os.environ.get("GAZIT_DEMO_BASE", "").rstrip("/")
+# HEADERS = {
+#     "Api-Key": os.environ.get("GAZIT_DEMO_KEY", ""),
+#     "Api-Id": os.environ.get("GAZIT_DEMO_ID", ""),
+#     "Api-Username": os.environ.get("GAZIT_DEMO_USER", ""),
+#     "Content-Type": "application/json",
+# }
+
+#LAW 
+BASE = os.environ.get("GAZIT_LAW_BASE", "").rstrip("/")
 HEADERS = {
-    "Api-Key": os.environ.get("GAZIT_DEMO_KEY", ""),
-    "Api-Id": os.environ.get("GAZIT_DEMO_ID", ""),
-    "Api-Username": os.environ.get("GAZIT_DEMO_USER", ""),
+    "Api-Key": os.environ.get("GAZIT_LAW_KEY", ""),
+    "Api-Id": os.environ.get("GAZIT_LAW_ID", ""),
+    "Api-Username": os.environ.get("GAZIT_LAW_USER", ""),
     "Content-Type": "application/json",
 }
+
+#FREETAX
+# BASE = os.environ.get("GAZIT_FREETAX_BASE", "").rstrip("/")
+# HEADERS = {
+#     "Api-Key": os.environ.get("GAZIT_FREETAX_KEY", ""),
+#     "Api-Id": os.environ.get("GAZIT_FREETAX_ID", ""),
+#     "Api-Username": os.environ.get("GAZIT_FREETAX_USER", ""),
+#     "Content-Type": "application/json",
+# }
 
 def call(ENDPOINT,METHOD,BODY):
     url = f"{BASE}/{ENDPOINT}"
