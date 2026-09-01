@@ -8,13 +8,14 @@ load_dotenv()
 def show(label):
     print(f"\n=== {label} ===")
 
-BODY = {
-    "view_id": 0,
-    "search_needle": "רומנו"
-}
-METHOD = "POST"
-ENDPOINT = os.environ.get("ACCOUNT_GET_ALL" , "").rstrip("/")
+def get_acc_id(name: str,issuer: str):
+    BODY = {
+        "view_id": 0,
+        "search_needle": name
+    }
+    METHOD = "POST"
+    ENDPOINT = os.environ.get("ACCOUNT_GET_ALL" , "").rstrip("/")
 
-res = gazitCaller.call(ENDPOINT,METHOD,BODY)
+    res = gazitCaller.call(ENDPOINT,METHOD,BODY, issuer)
 
-show(res)
+    show(res)
